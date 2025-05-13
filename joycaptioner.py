@@ -78,10 +78,17 @@ class JoyCaptionMainWindow(QMainWindow):
         self.load_model()
 
     def init_ui(self):
-        # Central Image Viewer
-        # Central: Interactive Image Viewer
+        # Central Image Viewer with filename label below
         self.graphics_view = ImageGraphicsView()
-        self.setCentralWidget(self.graphics_view)
+        self.filename_label = QLabel("")
+        self.filename_label.setAlignment(Qt.AlignCenter)
+        self.filename_label.setStyleSheet("font-size: 16px; margin-top: 10px;")
+        self.viewer_panel = QWidget()
+        viewer_layout = QVBoxLayout()
+        viewer_layout.addWidget(self.graphics_view, stretch=1)
+        viewer_layout.addWidget(self.filename_label, stretch=0)
+        self.viewer_panel.setLayout(viewer_layout)
+        self.setCentralWidget(self.viewer_panel)
 
 
         # Left: Image History
@@ -183,6 +190,9 @@ class JoyCaptionMainWindow(QMainWindow):
         self.image = Image.open(file_path)
         pixmap = QPixmap(file_path)
         self.graphics_view.set_image(pixmap)
+        # Set the file name label below the image
+        file_name = Path(file_path).name
+        self.filename_label.setText(file_name)
         self.captioner_dock.caption_btn.setEnabled(True)
         # Load caption if exists
         txt_path = str(Path(file_path).with_suffix('.txt'))
