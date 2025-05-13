@@ -65,7 +65,7 @@ class CaptionerDock(QDockWidget):
 class JoyCaptionMainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("JoyCaption - Image Captioner")
+        self.setWindowTitle("JoyCaptioner - Image Captioner")
         self.setMinimumSize(900, 600)
         self.processor = None
         self.llava_model = None
@@ -258,7 +258,7 @@ class JoyCaptionMainWindow(QMainWindow):
         self.status_bar.showMessage(f"Caption saved: {txt_path}", 5000)
 
     def show_about(self):
-        QMessageBox.information(self, "About JoyCaption", "JoyCaption\n\nImage Captioning App\nInspired by TagGUI\nhttps://github.com/fpgaminer/joycaption")
+        QMessageBox.information(self, "About JoyCaptioner", "JoyCaptioner\n\nImage Captioning App\nInspired by TagGUI\nhttps://github.com/fpgaminer/joycaption")
 
     def caption_all_images(self):
         images = []
