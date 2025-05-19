@@ -5,10 +5,17 @@
 ## Features
 
 - **Folder Browser & History**: Load an entire folder of images and navigate via thumbnails in a docked history panel.
+- **Dockable Panels**: Image history and captioner panels are dockable for flexible UI layouts.
 - **Interactive Viewer**: Pan and zoom images smoothly with mouse controls or toolbar buttons.
-- **Customizable Prompt**: Enter your own caption prompt or use the default formal-tone template.
-- **Single & Batch Captioning**: Generate a caption for the current image or batch-caption all images in the folder (with overwrite protection).
-- **Auto-Save Captions**: Captions are saved automatically as `.txt` files alongside each image.
+- **Customizable Prompt System**: Choose from multiple prompt modes (Descriptive Caption, Straightforward, Stable Diffusion, MidJourney, Booru tag lists, Art Critic Analysis, Product Listing, Social Media Post, etc.) via a dropdown. Prompts auto-update based on mode, word count, length, and extra instructions.
+- **Extra Prompt Customization**: Specify word count, caption length, and add extra instructions for highly tailored captions.
+- **Single & Batch Captioning**: Generate a caption for the current image or batch-caption all images in the folder. Batch mode warns if caption files exist and asks for confirmation before overwriting.
+- **Auto-Save & Auto-Load Captions**: Captions are saved as `.txt` files next to each image and are auto-loaded for editing when switching images.
+- **Progress Dialog for Batch Processing**: Batch captioning runs in a separate thread and displays a progress dialog with a cancel button.
+- **Resizable and Modern Window**: The app window opens at a modern standard size (1280x800) and cannot be resized below 1024x768.
+- **Status Bar Feedback**: Status messages are shown for model loading, caption generation, saving, and errors.
+- **Error Handling**: User-friendly error dialogs for missing models, failed captioning, or no images found.
+- **About Dialog**: Accessible from the Help menu for app info and credits.
 - **Modern Dark UI**: Fusion style with a dark palette and rounded controls for a sleek experience.
 
 ## Requirements
