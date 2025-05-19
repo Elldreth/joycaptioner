@@ -1,0 +1,30 @@
+# Requirements for JoyCaptioner
+# To install with CUDA 12.6 GPU support, run:
+#   pip install -r requirements.txt
+#
+# If you want CPU-only, comment out the --index-url and use the standard PyPI torch version.
+
+# Use the PyTorch CUDA 12.6 index as an extra index so pip also searches PyPI for other packages
+--extra-index-url https://download.pytorch.org/whl/cu126
+
+torch
+torchvision
+torchaudio
+
+# Core dependencies
+PySide6
+Pillow>=9.0
+transformers>=4.36
+
+# Optional: If using a specific model that requires triton
+# triton must be installed from the local wheel file in the triton folder
+triton/triton-2.0.0-cp310-cp310-win_amd64.whl
+#triton
+
+# If you want to avoid warnings about 'slow processor' in transformers
+# sentencepiece
+
+# For progress bars (optional, for nice CLI feedback)
+tqdm
+# Support for device_map
+accelerate
