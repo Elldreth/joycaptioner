@@ -20,5 +20,8 @@ venv/
 # Logs
 *.log
 
+# Backup files
+*.old
+
 # Captions and data
-*.txt
+

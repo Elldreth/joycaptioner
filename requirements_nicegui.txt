@@ -1,0 +1,4 @@
+nicegui>=1.3.14
+pillow
+torch
+transformers
