@@ -27,7 +27,7 @@
   torch
   transformers
   pillow
-  PySide6
+  nicegui>=1.3.14
   ```
 
 ## Installation
